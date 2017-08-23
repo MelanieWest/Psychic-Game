@@ -1,0 +1,84 @@
+h1 {
+    color: red;
+    margin: 30px;
+    Font-size: 30px;
+}
+
+ul{
+    color: blue;
+    font-size: 24px;
+    margin: 5px, 5px, 0px, 30px;
+}
+
+
+p {
+    font-size: 20px;
+    color: green;
+    margin: 10px;
+}
+
+.container {
+    height: 50px;
+    color: red;
+}
+/* 
+
+.button {
+    color: black;
+    height: 30px;
+    width: 60px;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+#btn-blue {
+    background-color: blue;
+    color: white;
+}
+
+#btn-black {
+    background-color: black;
+    color: white;
+}
+
+#btn-brown {
+    background-color: brown;
+    color: white;
+}
+
+#btn-green {
+    background-color: green;
+    color: white;
+}
+
+#btn-brown {
+    background-color: brown;
+    color: white;
+}
+
+#btn-grey {
+    background-color: gray;
+    color: white;
+}
+
+#btn-violet {
+    background-color: violet;
+    color: white;
+}
+
+#btn-white {
+    background-color: white;
+}
+
+#btn-red {
+    background-color: red;
+}
+
+#btn-orange {
+    background-color: orange;
+}
+
+#btn-yellow {
+    background-color: yellow;
+}
+ */
