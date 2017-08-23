@@ -4,7 +4,7 @@ h1 {
     Font-size: 30px;
 }
 
-ul{
+ul, li{
     color: blue;
     font-size: 24px;
     margin: 5px, 5px, 0px, 30px;
