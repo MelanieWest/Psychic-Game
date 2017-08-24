@@ -32,34 +32,39 @@ numGuesses += 1;
 //   alert("Computer guess: " + compChoice);
 
 //test the number by user
-  if(userGuess == compChoice) {
+  if(userGuess == compChoice) {   //document a win and zero guess count for new #
     document.getElementById("message1").innerHTML = 'Yay!  You got it!';
     document.getElementById("message2").innerHTML = 'Guess a new number between 0 and 9: ';
     Wins += 1;
+    numGuesses = 0; //reset guess count back to zero
     Stats( Wins, Losses, numGuesses);
 }
-  else if(numGuesses < 3 ){
+  else if(numGuesses < 3 ){   //incorrect guess with more tries left
     document.getElementById("message1").innerHTML = 'Your guess, ' + userGuess + ' is incorrect.';    
     document.getElementById("message2").innerHTML = 'Guess again...';
     Stats( Wins, Losses, numGuesses);    
   }
-  else if((numGuesses == 3) && (Losses < 3)) {
+  else if(numGuesses == 3) {  //guesses used up
     document.getElementById("message1").innerHTML = 'Sorry!  The answer was: ' + compChoice;
-    document.getElementById("message2").innerHTML = 'Guess a new number between 0 and 9: ';
     Losses += 1;
-    numGuesses = 0;
-    Stats( Wins, Losses, numGuesses);
+    if (Losses == 3) {  //game over
+      document.getElementById("message1").innerHTML = 'Game Over!  New Game?';
+      Stats( Wins, Losses, numGuesses);
+      Losses = 0;  // reset losses for a new game
+      Wins = 0;
+      numGuesses = 0;
+      document.getElementById("message2").innerHTML = 'Guess a new number between 0 and 9: ';
+      }  //game over
+    else {    //game not over
+      document.getElementById("message2").innerHTML = 'Guess a new number between 0 and 9: ';
+      numGuesses = 0;
+      Stats( Wins, Losses, numGuesses);
+    } //keep going with the next number
   
 }
-  else{
-    document.getElementById("message1").innerHTML = 'Game Over!  New Game?';
-    Stats( Wins, Losses, numGuesses);
-    Losses = 0;  // reset losses for a new game
-    Wins = 0;
-    numGuesses = 0;
-    document.getElementById("message2").innerHTML = 'Guess a new number between 0 and 9: ';
-}
-}
+   
+    
+}   //end of onkeyup event
 
 
   // function for keeping stats updated
